@@ -4,12 +4,11 @@ from importlib import resources
 from pathlib import Path
 
 from jsonschema import Draft7Validator, FormatChecker, validators
-
 from referencing import Registry, Resource
 from referencing.jsonschema import DRAFT202012
 
 from cdxev.log import LogMessage
-from cdxev.validator.helper import open_schema, validate_filename, load_spdx_schema
+from cdxev.validator.helper import load_spdx_schema, open_schema, validate_filename
 from cdxev.validator.warningsngreport import WarningsNgReporter
 
 logger = logging.getLogger(__name__)
