@@ -876,13 +876,7 @@ class TestInternalMetaData(unittest.TestCase):
                     "bom-ref": "acme-app",
                     "supplier": {"name": "Acme"},
                     "name": "Acme_Application",
-                    "licenses": [
-                        {
-                            "license": {
-                                "id": "Apache-1.0"
-                            }
-                        }
-                    ],
+                    "licenses": [{"license": {"id": "Apache-1.0"}}],
                     "version": "9.1.1",
                     "hashes": [
                         {"alg": "MD5", "content": "ec7781220ec7781220ec778122012345"}
@@ -893,7 +887,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -925,7 +919,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -957,7 +951,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -989,7 +983,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -1021,7 +1015,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -1053,7 +1047,7 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
@@ -1085,10 +1079,9 @@ class TestInternalMetaData(unittest.TestCase):
                 },
             },
             "compositions": [],
-            "dependencies": []
+            "dependencies": [],
         }
         for spec_version in list_of_specVersions:
             sbom["specVersion"] = spec_version
             issues = validate_test(sbom)
             self.assertEqual(search_for_word_issues("group", issues), True)
-
